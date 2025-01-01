@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "vite build",
-    "dev": "npx tailwindcss -i ./styles.css -o ./output.css --watch    "
+    "deploy": "vite build && gh-pages -d dist",
+    "dev": "npx tailwindcss -i ./styles.css -o ./output.css --watch"
   },
   "dependencies": {
     "express": "^4.21.2",

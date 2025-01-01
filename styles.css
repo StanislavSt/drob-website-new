@@ -4,9 +4,9 @@
 
 @font-face {
   font-family: 'CustomFont';
-  src: url('/assets/fonts/ABCMonumentGroteskSemi-Mono-Regular.woff2') format('woff2'),
-       url('/assets/fonts/ABCMonumentGroteskSemi-Mono-Regular.woff') format('woff'),
-       url('/assets/fonts/ABCMonumentGroteskSemi-Mono-Regular.otf') format('opentype');
+  src: url('/public/fonts/ABCMonumentGroteskSemi-Mono-Regular.woff2') format('woff2'),
+       url('/public/fonts/ABCMonumentGroteskSemi-Mono-Regular.woff') format('woff'),
+       url('/public/fonts/ABCMonumentGroteskSemi-Mono-Regular.otf') format('opentype');
 }
 
 body {

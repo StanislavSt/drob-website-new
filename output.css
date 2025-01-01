@@ -658,8 +658,8 @@ video {
   display: none;
 }
 
-.h-2 {
-  height: 0.5rem;
+.h-1 {
+  height: 0.25rem;
 }
 
 .h-3 {
@@ -684,10 +684,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-1 {
-  height: 0.25rem;
 }
 
 .w-1\/2 {
@@ -916,14 +912,6 @@ video {
   text-decoration-line: underline;
 }
 
-.opacity-50 {
-  opacity: 0.5;
-}
-
-.opacity-80 {
-  opacity: 0.8;
-}
-
 .mix-blend-difference {
   mix-blend-mode: difference;
 }
@@ -988,9 +976,9 @@ video {
 @font-face {
   font-family: 'CustomFont';
 
-  src: url('/assets/fonts/ABCMonumentGroteskSemi-Mono-Regular.woff2') format('woff2'),
-       url('/assets/fonts/ABCMonumentGroteskSemi-Mono-Regular.woff') format('woff'),
-       url('/assets/fonts/ABCMonumentGroteskSemi-Mono-Regular.otf') format('opentype');
+  src: url('/public/fonts/ABCMonumentGroteskSemi-Mono-Regular.woff2') format('woff2'),
+       url('/public/fonts/ABCMonumentGroteskSemi-Mono-Regular.woff') format('woff'),
+       url('/public/fonts/ABCMonumentGroteskSemi-Mono-Regular.otf') format('opentype');
 }
 
 body {
@@ -1197,10 +1185,6 @@ body {
   color: rgb(30 58 138 / var(--tw-text-opacity, 1));
 }
 
-.hover\:filter-blue-sepia:hover {
-  filter: invert(0.8) sepia(1) hue-rotate(200deg);
-}
-
 .peer:checked ~ .peer-checked\:bg-green-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(34 197 94 / var(--tw-bg-opacity, 1));
@@ -1236,11 +1220,6 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-  .dark\:bg-gray-700 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(55 65 81 / var(--tw-bg-opacity, 1));
-  }
-
   .dark\:text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity, 1));

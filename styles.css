@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('/assets/fonts/ABCMonumentGroteskSemi-Mono-Regular.woff2') format('woff2'),
+       url('/assets/fonts/ABCMonumentGroteskSemi-Mono-Regular.woff') format('woff'),
+       url('/assets/fonts/ABCMonumentGroteskSemi-Mono-Regular.otf') format('opentype');
+}
+
+body {
+  font-family: 'CustomFont', sans-serif; /* Fallback to sans-serif */
+}
+
+@keyframes spin-33 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-45 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Default state: no animation */
+#logo-circle {
+  position: relative;
+  animation: spin-33 linear infinite; /* Default infinite rotation */
+  animation-duration: 1.818s; /* Default to 33 RPM */
+  animation-play-state: paused; /* Default to paused */
+}
+
+/* Adjust border and spacing for bottom container */
+.border-top {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  width: 90%;
+  margin: 0 auto;
+}
+
+#volume-btn {
+  cursor: pointer;
+}
+
+#rpm-33,
+#rpm-45 {
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+#rpm-33:hover,
+#rpm-45:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.yellow-dot{
+  display:none
+}
+.active > * > .yellow-dot {
+  display: block;
+}
+
+
+
+/* Style for the range input */
+.audio-progress {
+  -webkit-appearance: none; /* Remove default styling */
+  appearance: none;
+  width: 100%; /* Full width */
+  height: 2px; /* Thin line */
+  background: white; /* Line color */
+  outline: none;
+  border-radius: 5px; /* Slightly rounded edges */
+  cursor: pointer; /* Pointer cursor for interaction */
+}
+
+/* Custom thumb styling for WebKit browsers (Chrome, Safari) */
+.audio-progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px; /* Small circle diameter */
+  height: 10px; /* Small circle diameter */
+  background: white; /* Circle color */
+  border-radius: 50%; /* Make it circular */
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Custom thumb styling for Mozilla browsers (Firefox) */
+.audio-progress::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Custom thumb styling for Microsoft browsers (Edge, IE) */
+.audio-progress::-ms-thumb {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Hide track outline in Firefox */
+.audio-progress::-moz-focus-outer {
+  border: 0;
+}
+
+.dynamic-description {
+  mix-blend-mode: difference;
+  color: white; /* Default color for text to invert properly */
+  position: relative; /* Ensures proper stacking context for blending */
+}
+

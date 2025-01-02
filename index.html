@@ -12,47 +12,44 @@
 
   <body class="relative bg-black text-white h-screen overflow-hidden">
     <canvas id="visualizer" class="w-full h-full z-0"></canvas>
-
     <!-- Description Text -->
-    <div class="absolute top-0 space-y-4 max-w-4xl z-20 text-white mix-blend-difference">
-      <h1 class="text-4xl md:text-5xl font-bold md:leading-[45px]">
-        <span>
-          The DROB concept includes
-        </span>
-        <a href="#" class="underline hover:text-blue-900">
-          events
-        </a>,
-        <a href="#" class="underline hover:text-blue-900">
-          artists
-        </a>, and a
-        <a href="#" class="underline hover:text-blue-900">
-          record label
-        </a>.
+    <div
+      class="absolute top-0 space-y-4 p-3 max-w-sm md:max-w-2xl lg:max-w-4xl xl:max-w-5xl z-20 text-white mix-blend-difference"
+    >
+      <h1
+        class="text-2xl leading-[25px] md:text-4xl lg:text-5xl xl:text-6xl font-bold md:leading-[45px]"
+      >
+        <span> The DROB concept includes </span>
+        <a href="#" class="underline hover:text-blue-900"> events</a>,
+        <a href="#" class="underline hover:text-blue-900">artists</a> and a
+        <a href="#" class="underline hover:text-blue-900"> record label</a>.
         <span>
           Focused on up-and-coming talent, we represent the most exciting and
           original sounds from across the musical spectrum.
         </span>
       </h1>
     </div>
-    
+
     <!-- Main Content -->
     <div
       class="absolute inset-0 flex flex-col justify-center items-center text-center z-10"
     >
       <div
         id="logo-circle"
-        class="w-[45vh] h-[45vh] rounded-full bg-transparent flex justify-center items-center text-black text-6xl font-bold relative filter backdrop-sepia backdrop-invert backdrop-opacity-50"
+        class="w-[250px] h-[250px] md:w-[400px] md:h-[400px] xl:w-[550px] xl:h-[550px] rounded-full bg-transparent flex justify-center items-center text-black text-6xl font-bold relative filter backdrop-sepia backdrop-invert backdrop-opacity-50"
       >
         <div class="absolute inset-0 flex flex-col justify-center items-center">
-          <div class="flex w-full mt-2 px-6 text-5xl">
-            <div>
-              <span class="ml-5">Д</span>
-              <span class="ml-10">Р</span>
+          <div
+            class="flex w-full mt-2 px-6 text-2xl md:text-4xl xl:text-5xl items-center"
+          >
+            <div class="flex items-center">
+              <span class="md:ml-5 xl:ml-8">Д</span>
+              <span class="ml-8 md:ml-12 xl:ml-16">Р</span>
             </div>
-            <span class="ml-36">Б</span>
+            <span class="ml-20 md:ml-28 xl:ml-40">Б</span>
           </div>
           <div
-            class="absolute flex items-center justify-center text-5xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            class="absolute flex items-center justify-center text-3xl md:text-[2.5rem] xl:text-[3.5rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
           >
             ●
           </div>
@@ -123,8 +120,17 @@
         step="0.1"
         class="audio-progress"
       />
+      <div class="w-full mt-3 block md:hidden">
+        <a
+          href="https://drobmusic.bandcamp.com/album/reality-check-ep"
+          target="_blank"
+          class="text-sm font-medium hover:opacity-80"
+          >Garo - The Tribe (Reality Check EP)</a
+        >
+      </div>
+
       <div
-        class="relative w-full bg-transparent flex items-center justify-between pt-4"
+        class="relative w-full bg-transparent flex items-center justify-between mt-1 md:pt-4"
       >
         <!-- Audio Progress Range -->
 
@@ -176,8 +182,11 @@
               ></path>
             </svg>
           </button>
-          <span class="text-sm font-medium"
-            >Garo - Anicinogenic (Reality Check EP)</span
+          <a
+            href="https://drobmusic.bandcamp.com/album/reality-check-ep"
+            target="_blank"
+            class="text-sm font-medium hover:opacity-80 hidden md:block"
+            >Garo - The Tribe (Reality Check EP)</a
           >
         </div>
 

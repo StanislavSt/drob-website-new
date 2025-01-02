@@ -193,13 +193,20 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isPlaying) return; // Only adjust speed if animation is running
     smoothTransitionSpeed(1.333); // Transition to 45 RPM
   });
-
   partyModeButton.addEventListener("change", () => {
     isPartyMode = partyModeButton.checked; // Update the flag based on toggle state
     if (!isPartyMode) {
       visualizerCanvas.classList.add("hidden");
     } else {
       visualizerCanvas.classList.remove("hidden");
+  
+      // Load the first preset immediately
+      const randomPreset = getRandomPreset();
+      if (randomPreset) {
+        visualizer.loadPreset(randomPreset, 0); // No blending for instant effect
+      }
+  
+      // Start rendering the visualizer immediately
       requestAnimationFrame(renderVisualizer);
     }
   });

@@ -4,14 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "dev": "vite",
     "build": "vite build",
-    "dev": "vite"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "vite": "^6.0.6"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "gh-pages": "^6.2.0",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
     "tailwindcss-filters": "^3.0.0"

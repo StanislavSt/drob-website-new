@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  audioElement.src = "public/my_audio.mp3"; // Ensure this path is correct
+  audioElement.src = "my_audio.mp3"; 
   audioElement.controls = true;
   audioElement.className = "hidden";
   document.body.appendChild(audioElement);
